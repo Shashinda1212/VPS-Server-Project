@@ -21,4 +21,4 @@ jobs:
           ssh-keyscan -H 54.167.35.52 >> ~/.ssh/known_hosts
 
       - name: Deploy files to server
-        run: rsync -avz --delete --exclude=".git*" --exclude=".github" -e "ssh" ./ ${{ secrets.SSH_USER }}@54.167.35.52:/www/wwwroot/pupetv2ray.linkpc.net
+        run: rsync -avz --delete --exclude=".git*" --exclude=".github" -e "ssh" ./ ${{ secrets.SSH_USER }}root@54.167.35.52:/www/wwwroot/pupetv2ray.linkpc.net
